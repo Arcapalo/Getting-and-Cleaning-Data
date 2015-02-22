@@ -1,0 +1,40 @@
+VARIABLES
+
+Activity_labels  - Store the activity descriptions and will be merged with the subject and his measures.
+
+measures         - Contains the measures names.  It´s an intermediary repository used give a significant name to measures 
+                   on the data sets in process.
+
+measures_select  - Contains the select measures names, means and sd.  It's an especialization of "measures" variable.
+                   
+new_header       - Stores meaningful header for the data sets.
+
+subject_test     - Contains de subject's codes of TEST data set.
+ 
+subject_train    - Contains de subject's codes of TRAIN data set.
+
+Activity_train   - Used to join subject's code and its respective names for train data set.  This is achived using the activity
+                   code as an index on Activity_labels variable.
+                     
+X_train          - Store all TRAIN data set contents. No filters applied to avoid missing data.
+                   names(X_train) is used in the data set to the change meaningless headers.
+  
+X_train_final    - Used to join subject's code, names and only the desired measures on TRAIN data set
+    
+Activity_test    - Used to join subject's code and its respective names for train data set.  This is achived using the activity
+                   code as an index on Activity_labels variable.
+                     
+X_test          - Store all TEST data set contents. No filters applied to avoid missing data.
+                   names(X_test) is used in the data set to the change meaningless headers.
+  
+X_test_final    - Used to join subject's code, names and only the desired measures (mean|sd) on TEST data set 
+
+tidy_data1      - This is the final data preparation, resulting of appending processed TEST and TRAIN data sets with meaningful header.                  
+                  
+off_labels      - Used to improve data set header meaning.
+
+sep_labels      - Ensure unique header names.
+
+melt_data       - Split labels from data in order to simplify the final MEAN|SD obtention. 
+
+tidy_data       - Reshape the data set headers and final measures result in a tidy data set compliance.
